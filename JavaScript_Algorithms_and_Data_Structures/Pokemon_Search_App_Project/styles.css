@@ -1,0 +1,194 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+:root {
+    --white: #fffffe ;
+    --gray: #424253;
+    --blue: #171c33;
+    --yellow: #fecc4c;
+    --orange: #ffac33;
+    --border-orange: #feac32;
+    --pink: #eb9999;
+    --red: #970808;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: gray;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Pokemon Solid';
+    font-size: 4rem;
+    color: var(--yellow);
+    text-shadow: black 8px 8px;
+}
+
+#pokedex-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: black 15px 15px;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
+}
+
+#search-p {
+    color: var(--orange);
+    padding-bottom: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#search-input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 60%;
+}
+
+#search-button {
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--blue);
+    background-image: linear-gradient(var(--yellow), var(--orange));
+    width: 20%;
+}
+
+#pokedex-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    min-height: 400px;
+    padding: 10px;
+    background-color: rgb(8, 7, 7);
+    color: var(--orange);
+    border-radius: 8px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 1.5rem;
+}
+
+#pokemon-image {
+    padding: 40px;
+}
+
+#types {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--blue);
+}
+
+#types span {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+table {
+    border-spacing: 10px;
+    width: 95%;
+    text-align: center;
+}
+
+td, th {
+    background-image: linear-gradient(var(--yellow), var(--orange));
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#weight, #height {
+    font-size: 20px;
+    color: white
+}
+
+.normal {
+    background-color: #b7b7aa;
+}
+  
+.fire {
+    background-color: #ff6f52;
+}
+
+.water {
+    background-color: #42a1ff;
+}
+
+.electric {
+    background-color: #fecc33;
+}
+
+.grass {
+    background-color: #78cc55;
+}
+
+.ice {
+    background-color: #66ccfe;
+}
+
+.fighting {
+    background-color: #d3887e;
+}
+
+.poison {
+    background-color: #c68bb7;
+}
+
+.ground {
+    background-color: #dfba52;
+}
+
+.flying {
+    background-color: #8899ff;
+}
+
+.psychic {
+    background-color: #ff66a3;
+}
+
+.bug {
+    background-color: #aabb23;
+}
+
+.rock {
+    background-color: #baaa66;
+}
+
+.ghost {
+    background-color: #9995d0;
+}
+
+.dragon {
+    background-color: #9e93f1;
+}
+
+.dark {
+    background-color: #b59682;
+}
+
+.steel {
+    background-color: #abaabb;
+}
+
+.fairy {
+    background-color: #ed99ed;
+}
