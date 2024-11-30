@@ -3,10 +3,11 @@ const searchBtn = document.getElementById("search-button");
 
 const pokemonName = document.getElementById("pokemon-name");
 const pokemonId = document.getElementById("pokemon-id");
+
+const pokemonImage = document.getElementById("pokemon-image");
 const pokemonWeight = document.getElementById("weight");
 const pokemonHeight = document.getElementById("height");
 
-const pokemonImage = document.getElementById("pokemon-image");
 const pokemonTypes = document.getElementById("types");
 
 const hp = document.getElementById("hp");
