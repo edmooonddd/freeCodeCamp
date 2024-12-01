@@ -1,0 +1,212 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --text-color: hsl(228, 12%, 28%);
+    --pale: hsl(32, 37%, 92%);
+    --brown: hsl(19, 49%, 26%);
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--pale);
+}
+
+#header-img {
+    width: 60px;
+    object-fit: contain;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--white);
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.the-product {
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: "Montserrat Alternates";
+}
+
+#email-section {
+    margin-top: 100px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--brown);
+}
+
+#submit {
+    background-color: var(--brown);
+    color: var(--white);
+    cursor: pointer;
+}
+
+section::before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+section {
+    margin: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Fraunces", sans-serif;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.icon {
+    color: var(--brown);
+    margin-right: 30px;
+}
+
+#features {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-family: "Montserrat Alternates";
+}
+
+#video {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.product-image {
+    width: 50%;
+    margin: auto;
+    height: 1000px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px 10px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ img {
+    width: 100%;
+    height: 100%;
+ }
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.content {
+    font-family: "Montserrat Alternates";
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-price {
+    margin-right: 20px;
+    font-size: 30px;
+    font-family: "Fraunces";
+    color: var(--brown);
+}
+
+.brand {
+    font-family: "Montserrat Alternates";
+    letter-spacing: 5px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.header {
+    font-family: "Fraunces";
+    margin: 10px 0;
+    color: var(--brown)
+}
+
+.add {
+    background-color: var(--brown);
+    cursor: pointer;
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    font-family: "Montserrat Alternates";
+    font-weight: 700;
+    padding: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+    #nav-bar {
+        -ms-flex-direction: row;
+    }
+}
+
+@media only screen and (450px < width < 600px) {
+    .card {
+        display: flex;
+        max-width: 525px;
+    }
+    .inner-card{
+        width: 300px;
+        padding: 20px;
+    }
+    .product-image {
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+}
