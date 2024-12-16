@@ -5,6 +5,7 @@ Feel free to explore each project to see the code and functionality. You can use
 ### Projects Included: 
 - JavaScript Algorithms and Data Structures
 - Responsive Web Design
+- Relational Database (currently working with)
 - ...more projects to come soon!
 
 Thank you for visiting, and happy coding!
