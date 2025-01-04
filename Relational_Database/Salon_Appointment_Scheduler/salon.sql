@@ -51,7 +51,7 @@ CREATE TABLE public.appointments (
     appointment_id integer NOT NULL,
     customer_id integer NOT NULL,
     service_id integer NOT NULL,
-    "time" character varying(40)
+    "time" character varying(255) NOT NULL
 );
 
 
@@ -85,8 +85,8 @@ ALTER SEQUENCE public.appointments_appointment_id_seq OWNED BY public.appointmen
 
 CREATE TABLE public.customers (
     customer_id integer NOT NULL,
-    phone character varying(40),
-    name character varying(255)
+    name character varying(255) NOT NULL,
+    phone character varying(40) NOT NULL
 );
 
 
@@ -120,7 +120,7 @@ ALTER SEQUENCE public.customers_customer_id_seq OWNED BY public.customers.custom
 
 CREATE TABLE public.services (
     service_id integer NOT NULL,
-    name character varying(255)
+    name character varying(255) NOT NULL
 );
 
 
@@ -173,56 +173,48 @@ ALTER TABLE ONLY public.services ALTER COLUMN service_id SET DEFAULT nextval('pu
 -- Data for Name: appointments; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.appointments VALUES (22, 19, 1, '10pm');
-INSERT INTO public.appointments VALUES (25, 22, 1, '');
-INSERT INTO public.appointments VALUES (32, 22, 1, '');
-INSERT INTO public.appointments VALUES (39, 22, 1, '');
-INSERT INTO public.appointments VALUES (44, 36, 1, '9pm');
-INSERT INTO public.appointments VALUES (47, 22, 1, '');
-INSERT INTO public.appointments VALUES (54, 22, 1, '');
-INSERT INTO public.appointments VALUES (65, 52, 5, '3:30 pm');
+INSERT INTO public.appointments VALUES (15, 23, 3, '7:00 PM');
+INSERT INTO public.appointments VALUES (16, 24, 2, '8:30 AM');
+INSERT INTO public.appointments VALUES (17, 25, 1, '12PM');
 
 
 --
 -- Data for Name: customers; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.customers VALUES (19, '555-555-5555', 'Fabio');
-INSERT INTO public.customers VALUES (22, '', '');
-INSERT INTO public.customers VALUES (36, '111-111-1111', 'james');
-INSERT INTO public.customers VALUES (52, '000-111-5555', 'bryan');
+INSERT INTO public.customers VALUES (23, 'Edmond', '111-111-1111');
+INSERT INTO public.customers VALUES (24, 'Marie', '09394493255');
+INSERT INTO public.customers VALUES (25, 'James', '222-555-1955');
 
 
 --
 -- Data for Name: services; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.services VALUES (1, 'cut');
-INSERT INTO public.services VALUES (2, 'color');
-INSERT INTO public.services VALUES (3, 'perm');
-INSERT INTO public.services VALUES (4, 'style');
-INSERT INTO public.services VALUES (5, 'trim');
+INSERT INTO public.services VALUES (1, 'Haircut');
+INSERT INTO public.services VALUES (2, 'Haircolor');
+INSERT INTO public.services VALUES (3, 'Nail Polish');
 
 
 --
 -- Name: appointments_appointment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.appointments_appointment_id_seq', 65, true);
+SELECT pg_catalog.setval('public.appointments_appointment_id_seq', 17, true);
 
 
 --
 -- Name: customers_customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.customers_customer_id_seq', 52, true);
+SELECT pg_catalog.setval('public.customers_customer_id_seq', 25, true);
 
 
 --
 -- Name: services_service_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.services_service_id_seq', 5, true);
+SELECT pg_catalog.setval('public.services_service_id_seq', 3, true);
 
 
 --
@@ -234,19 +226,19 @@ ALTER TABLE ONLY public.appointments
 
 
 --
--- Name: customers customers_phone_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
---
-
-ALTER TABLE ONLY public.customers
-    ADD CONSTRAINT customers_phone_key UNIQUE (phone);
-
-
---
 -- Name: customers customers_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.customers
     ADD CONSTRAINT customers_pkey PRIMARY KEY (customer_id);
+
+
+--
+-- Name: customers phone_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.customers
+    ADD CONSTRAINT phone_key UNIQUE (phone);
 
 
 --
